@@ -46,18 +46,18 @@
            
           <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Jung Eui Chan</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Webprogramming</a></small></p>
           <p class="footer-share-icons">
-              <a href="https://www.twitter.com" class="fa-icon" title="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com" class="fa-icon" title="">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.behance.com" class="fa-icon" title="">
-                  <i class="fa fa-behance" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.vimeo.com" class="fa-icon" title="">
-                  <i class="fa fa-vimeo" aria-hidden="true"></i>
-              </a>
+            <a href="https://www.twitter.com" class="fa-icon" title="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com" class="fa-icon" title="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com" class="fa-icon" title="">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+          <a href="https://www.youtube.com" class="fa-icon" title="">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
           </p>
                        
         </div>
@@ -97,13 +97,14 @@
                 <p>축구와 비슷한 놀이 문화는 세계 여러 곳에서 고대부터 발달하였다.심지어는 
                   아즈텍과 마야 같은 고립된 문명에서도 이러한 놀이 문화의 흔적을 찾을 수 있다</p>
               </div>
-
+              
               <h4>현대축구의 시작</h4>
               
               <ul class="list-unstyled">
                 <li>19세기</li> 
                 <li>영국</li>
               </ul>
+              <p id="datetime"></p>
               
 
               
@@ -176,6 +177,21 @@
 
 
 <script>
+   // 날짜와 시간을 업데이트하는 함수
+   function updateDateTime() {
+      var now = new Date();
+      var datetimeElement = document.getElementById('datetime');
+      datetimeElement.textContent = now.toLocaleString();
+    }
+
+    // 일정한 간격으로 날짜와 시간 업데이트
+    setInterval(updateDateTime, 1000); // 1초마다 업데이트
+
+    // 페이지가 로드되면 날짜와 시간을 표시
+    window.onload = function() {
+      updateDateTime();
+    };
+
     document.addEventListener("DOMContentLoaded", function (event) {
       navbarToggleSidebar();
       closeMenuBeforeGoingToPage();
